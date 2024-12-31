@@ -16,5 +16,6 @@ exports.createItem = async (req, res) => {
         res.status(201).json(item);
     } catch (error) {
         res.status(500).json({ message: 'Error creating item', error });
+        
     }
 };

@@ -26,8 +26,7 @@ exports.getAllItems = async (req, res) => {
 
         res.status(201).json({ message: 'Item created successfully', item: newItem });
     } catch (error) {
-        console.error('Error creating item:', error);
-        res.status(500).json({ message: 'Internal Server Error' });
+        res.status(500).json({ message: 'Error creating item', error });
     }
 };
 

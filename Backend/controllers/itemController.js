@@ -14,7 +14,8 @@ exports.getAllItems = async (req, res) => {
  exports.createItem = async (req, res) => {
     try {
         const { name, description } = req.body;
-
+         console.log({name, description});
+         
         // Validation
         if (!name || !description) {
             return res.status(400).json({ message: 'Name and description are required' });
